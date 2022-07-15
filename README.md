@@ -5,19 +5,44 @@ Initiate project
 ```
 
 Install d'express
+
 ```sh
 npm i express dotenv
 ```
 
 Generate the typescript configuration file
+
 ```sh
 npx tsc --init
 ```
+
 then modify the file tsconfig.json
-    baseUrl par "baseUrl": "./src",
-    "outDir": "dist",
-    "paths": {
-      "@/resources/*": ["resources/*"],
-      "@/utils/*": ["utils/*"],
-      "@/middleware/*": ["middleware/*"]
-    } 
+1. baseUrl par "baseUrl": "./src",
+2. "outDir": "dist",
+3. "paths": {
+"@/resources/_": ["resources/_"],
+"@/utils/_": ["utils/_"],
+"@/middleware/_": ["middleware/_"]
+}
+
+Directory alias management
+
+```sh
+npm i module-alias
+```
+
+then modify the file package.json
+
+```sh
+"_moduleAliases": {
+        "@/resources/*": [
+            "dist/resources/*"
+        ],
+        "@/utils/*": [
+            "dist/utils/*"
+        ],
+        "@/middleware/*": [
+            "dist/middleware/*"
+        ]
+    }
+```
