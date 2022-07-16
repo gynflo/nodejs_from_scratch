@@ -24,8 +24,8 @@ class App {
     }
 
     private initializeMiddleware(): void {
-        this.express.use(helmet);
-        this.express.use(cors);
+        this.express.use(helmet());
+        this.express.use(cors());
         this.express.use(morgan('dev'));
         this.express.use(express.json());
         this.express.use(express.urlencoded({ extended: false }));
@@ -45,9 +45,11 @@ class App {
     private initializeDatabaseConnection(): void {
         const { MONGO_USER, MONGO_PASSWORD, MONGO_PATH } = process.env;
 
-        mongoose.connect(
-            `mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}`
-        );
+        mongoose
+            .connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}`)
+            .then(() => {
+                console.log(`Connexion OK on ${MONGO_PATH}`);
+            });
     }
 
     public listen(): void {
