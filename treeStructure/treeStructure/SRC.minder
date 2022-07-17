@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<minder version="1.14.0" parent-etag="1640619646" etag="555759586">
+  <theme name="default" label="Light" index="0"/>
+  <styles>
+    <style level="0" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="rounded" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="10" nodepadding="10" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="1" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="2" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="3" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="4" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="5" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="6" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="7" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="8" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="9" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+    <style level="10" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+  </styles>
+  <drawarea x="-942.83333333333167" y="-936.33333333333326" scale="1"/>
+  <images/>
+  <nodes>
+    <node id="16" posx="1217.8333333333326" posy="1066.0000000000005" width="56" height="46" side="left" fold="false" treesize="926" layout="Vertical" group="false">
+      <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+      <nodename posx="1231.8333333333326" posy="1080.0000000000005" maxwidth="200">
+        <text data="SRC"/>
+      </nodename>
+      <nodenote></nodenote>
+      <nodes>
+        <node id="13" posx="420.33333333333394" posy="890.00000000000068" width="158" height="76" side="top" fold="false" treesize="636" color="#68b723" colorroot="false" layout="Vertical" sticker="folder" group="false">
+          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+          <nodename posx="488.33333333333394" posy="919.00000000000068" maxwidth="200">
+            <text data="Resources"/>
+          </nodename>
+          <nodenote></nodenote>
+          <nodes>
+            <node id="15" posx="442.83333333333394" posy="714.00000000000045" width="113" height="76" side="top" fold="false" treesize="636" color="#68b723" colorroot="false" layout="Vertical" sticker="folder" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="510.83333333333394" posy="743.00000000000045" maxwidth="200">
+                <text data="Post"/>
+              </nodename>
+              <nodenote></nodenote>
+              <nodes>
+                <node id="11" posx="388.33333333333394" posy="538.00000000000045" width="222" height="76" side="top" fold="false" treesize="636" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="456.33333333333394" posy="567.00000000000045" maxwidth="200">
+                    <text data="Post.controller.ts"/>
+                  </nodename>
+                  <nodenote>import { Router, Request, Response, NextFunction } from 'express';
+import Controller from '@/utils/interfaces/controller.interface';
+import HttpException from '@/utils/exceptions/http.exception';
+import validationMiddleware from '@/middleware/validation.middleware';
+import validate from '@/resources/post/post.validation';
+import PostService from '@/resources/post/post.service';
+
+class PostController implements Controller {
+    public path = '/posts';
+    public router = Router();
+    private PostService = new PostService();
+
+    constructor() {
+        this.initializeRoutes();
+    }
+
+    private initializeRoutes(): void {
+        this.router.post(
+            `${this.path}`,
+            validationMiddleware(validate.create),
+            this.create
+        );
+    }
+
+    private create = async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise&lt;Response | void&gt; =&gt; {
+        try {
+            const { title, body } = req.body;
+            console.log("&#x1F680; ~ file: post.controller.ts ~ line 32 ~ PostController ~ title", title)
+            const post = await this.PostService.create(title, body);
+            res.status(201).json({ post });
+        } catch (error) {
+            next(new HttpException(400, 'Cannot create post'));
+        }
+    };
+}
+
+export default PostController;
+</nodenote>
+                  <nodes>
+                    <node id="27" posx="177.33333333333394" posy="362.00000000000045" width="226" height="76" side="top" fold="false" treesize="226" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                      <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                      <nodename posx="245.33333333333394" posy="391.00000000000045" maxwidth="200">
+                        <text data="post.validation.ts"/>
+                      </nodename>
+                      <nodenote>import Joi from 'joi';
+
+const create = Joi.object({
+    title: Joi.string().required(),
+    body: Joi.string().required(),
+});
+
+export default { create };
+</nodenote>
+                    </node>
+                    <node id="26" posx="508.83333333333394" posy="362.00000000000045" width="207" height="76" side="top" fold="false" treesize="418" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                      <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                      <nodename posx="576.83333333333394" posy="391.00000000000045" maxwidth="200">
+                        <text data="post.service.ts"/>
+                      </nodename>
+                      <nodenote>import PostModel from '@/resources/post/post.model';
+import Post from '@/resources/post/post.interface';
+
+class PostService {
+    private post = PostModel;
+
+    public async create(title: string, body: string): Promise&lt;Post&gt; {
+        try {
+            const post = await this.post.create({ title, body });
+            return post;
+        } catch (error) {
+            throw new Error('Unable to create post');
+        }
+    }
+}
+
+export default PostService;
+</nodenote>
+                      <nodes>
+                        <node id="23" posx="403.33333333333394" posy="186.00000000000045" width="219" height="76" side="top" fold="false" treesize="219" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                          <nodename posx="471.33333333333394" posy="215.00000000000045" maxwidth="200">
+                            <text data="post.interface.ts"/>
+                          </nodename>
+                          <nodenote>import { Document } from 'mongoose';
+
+export default interface Post extends Document {
+    title: string,
+    body: string,
+}
+</nodenote>
+                        </node>
+                        <node id="25" posx="622.33333333333394" posy="186.00000000000045" width="199" height="76" side="top" fold="false" treesize="199" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                          <nodename posx="690.33333333333394" posy="215.00000000000045" maxwidth="200">
+                            <text data="post.model.ts"/>
+                          </nodename>
+                          <nodenote>import { Schema, model } from 'mongoose';
+import Post from '@/resources/post/post.interface';
+
+const PostSchema = new Schema(
+    {
+        title: {
+            type: String,
+            required: true,
+        },
+
+        body: {
+            type: String,
+            required: true,
+        },
+    },
+    { timestamps: true }
+);
+
+export default model&lt;Post&gt;('Post', PostSchema);
+</nodenote>
+                        </node>
+                      </nodes>
+                    </node>
+                  </nodes>
+                </node>
+              </nodes>
+            </node>
+          </nodes>
+        </node>
+        <node id="4" posx="817.33333333333417" posy="890.00000000000068" width="157" height="76" side="top" fold="false" treesize="157" color="#f9c440" colorroot="false" layout="Vertical" sticker="document" group="false">
+          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+          <nodename posx="885.33333333333417" posy="919.00000000000068" maxwidth="200">
+            <text data="index.ts"/>
+          </nodename>
+          <nodenote>
+
+import 'dotenv/config';
+import 'module-alias/register';
+
+import validateEnv from '@/utils/validateEnv';
+import App from './app';
+import PostController from '@/resources/post/post.controller';
+
+validateEnv();
+
+const app = new App([new PostController()], Number(process.env.PORT));
+
+
+app.listen();</nodenote>
+        </node>
+        <node id="14" posx="1248.3333333333321" posy="890.00000000000023" width="115" height="76" side="top" fold="false" treesize="662.99999999999818" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
+          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+          <nodename posx="1316.3333333333321" posy="919.00000000000023" maxwidth="200">
+            <text data="Utils"/>
+          </nodename>
+          <nodenote></nodenote>
+          <nodes>
+            <node id="8" posx="974.33333333333394" posy="714.00000000000023" width="184" height="76" side="top" fold="false" treesize="184" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+              <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="300" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="1042.3333333333339" posy="743.00000000000023" maxwidth="300">
+                <text data="ValidateEnv"/>
+              </nodename>
+              <nodenote>
+
+import { cleanEnv, str, port } from 'envalid';
+
+function validateEnv(): void {
+    cleanEnv(process.env, {
+        NODE_ENV: str({
+            choices: ['development', 'production'],
+        }),
+        MONGO_PATH: str(),
+        MONGO_USER: str(),
+        MONGO_PASSWORD: str(),
+        PORT: port({ default: 3000 }),
+    });
+}
+
+export default validateEnv;</nodenote>
+            </node>
+            <node id="18" posx="1189.3333333333321" posy="714.00000000000023" width="161" height="76" side="top" fold="false" treesize="223" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="1257.3333333333321" posy="743.00000000000023" maxwidth="200">
+                <text data="exceptions"/>
+              </nodename>
+              <nodenote></nodenote>
+              <nodes>
+                <node id="20" posx="1158.3333333333321" posy="538.00000000000023" width="223" height="76" side="top" fold="false" treesize="223" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="1226.3333333333321" posy="567.00000000000023" maxwidth="200">
+                    <text data="http.exception.ts"/>
+                  </nodename>
+                  <nodenote>class HttpException extends Error {
+    public status: number;
+    public message: string;
+
+    constructor(status: number, message: string) {
+        super(message);
+        this.status = status;
+        this.message = message;
+    }
+}
+
+export default HttpException;
+</nodenote>
+                </node>
+              </nodes>
+            </node>
+            <node id="19" posx="1431.8333333333323" posy="714.00000000000023" width="155" height="76" side="top" fold="false" treesize="256" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="1499.8333333333323" posy="743.00000000000023" maxwidth="200">
+                <text data="Interfaces"/>
+              </nodename>
+              <nodenote></nodenote>
+              <nodes>
+                <node id="21" posx="1381.3333333333321" posy="538.00000000000023" width="256" height="76" side="top" fold="false" treesize="256" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="158" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="1449.3333333333321" posy="567.00000000000023" maxwidth="158">
+                    <text data="controller.interface.ts"/>
+                  </nodename>
+                  <nodenote>import { Router } from 'express';
+
+interface Controller {
+    path: string;
+    router: Router;
+}
+
+export default Controller;</nodenote>
+                </node>
+              </nodes>
+            </node>
+          </nodes>
+        </node>
+        <node id="7" posx="1637.3333333333335" posy="890.00000000000068" width="144" height="76" side="top" fold="false" treesize="144" color="#c6262e" colorroot="false" layout="Vertical" sticker="document" group="false">
+          <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+          <nodename posx="1705.3333333333335" posy="919.00000000000068" maxwidth="200">
+            <text data="app.ts"/>
+          </nodename>
+          <nodenote>import express, { Application } from 'express';
+import mongoose from 'mongoose';
+// compresse le corps de la reponse (mdl)
+import compression from 'compression';
+// Securise express http (mdl)
+import helmet from 'helmet';
+import cors from 'cors';
+import morgan from 'morgan';
+
+import Controller from '@/utils/interfaces/controller.interface';
+import ErrorMiddleware from '@/middleware/error.middleware';
+
+class App {
+    public express: Application;
+    public port: number;
+
+    constructor(controllers: Controller[], port: number) {
+        this.express = express();
+        this.port = port;
+
+        this.initializeDatabaseConnection();
+        this.initializeMiddleware();
+        this.initializeControllers(controllers);
+        this.initializeErrorHandling();
+    }
+
+    private initializeMiddleware(): void {
+        this.express.use(helmet());
+        this.express.use(cors());
+        this.express.use(morgan('dev'));
+        this.express.use(express.json());
+        this.express.use(express.urlencoded({ extended: false }));
+        this.express.use(compression());
+    }
+
+    private initializeControllers(controllers: Controller[]): void {
+        controllers.forEach((controller: Controller) =&gt; {
+            this.express.use('/api', controller.router);
+        });
+    }
+
+    private initializeErrorHandling(): void {
+        this.express.use(ErrorMiddleware);
+    }
+
+    private initializeDatabaseConnection(): void {
+        const { MONGO_USER, MONGO_PASSWORD, MONGO_PATH } = process.env;
+
+        mongoose
+            .connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}`)
+            .then(() =&gt; {
+                console.log(`Connexion OK on ${MONGO_PATH}`);
+            });
+    }
+
+    public listen(): void {
+        this.express.listen(this.port, () =&gt; {
+            console.log(`APP listen on port: ${this.port}`);
+        });
+    }
+}
+
+export default App;
+</nodenote>
+        </node>
+        <node id="17" posx="1954.8333333333346" posy="890.00000000000023" width="174" height="76" side="top" fold="false" treesize="521.00000000000045" color="#7a36b1" colorroot="false" layout="Vertical" sticker="folder" group="false">
+          <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+          <nodename posx="2022.8333333333346" posy="919.00000000000023" maxwidth="200">
+            <text data="Middlewares"/>
+          </nodename>
+          <nodenote></nodenote>
+          <nodes>
+            <node id="28" posx="1781.3333333333337" posy="714.00000000000023" width="242" height="76" side="top" fold="false" treesize="242" color="#7a36b1" colorroot="false" layout="Vertical" sticker="document" group="false">
+              <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="1849.3333333333337" posy="743.00000000000023" maxwidth="200">
+                <text data="error.middleware.ts"/>
+              </nodename>
+              <nodenote>import { Request, Response, NextFunction } from 'express';
+import HttpException from '@/utils/exceptions/http.exception';
+
+function ErrorMiddleware(
+    error: HttpException,
+    req: Request,
+    res: Response,
+    next: NextFunction
+): void {
+    const status = error.status || 500;
+    const message = error.message || 'Something went wrong';
+
+    res.status(status).send({
+        status,
+        message,
+    });
+}
+
+export default ErrorMiddleware;
+</nodenote>
+            </node>
+            <node id="29" posx="2023.3333333333346" posy="714.00000000000023" width="279" height="76" side="top" fold="false" treesize="279" color="#7a36b1" colorroot="false" layout="Vertical" sticker="document" group="false">
+              <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="2091.3333333333348" posy="743.00000000000023" maxwidth="200">
+                <text data="validation.middleware.ts"/>
+              </nodename>
+              <nodenote>import { Request, Response, NextFunction, RequestHandler } from 'express';
+
+import Joi from 'joi';
+
+function validationMiddleware(schema: Joi.Schema): RequestHandler {
+    return async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise&lt;void&gt; =&gt; {
+        const validationOptions = {
+            // si echec , on arrete tout
+            abortEarly: false,
+            // supprime les entr&#xE9;es inconnues
+            allowunknown: true,
+            stripUnknown: true,
+        };
+
+        try {
+            const value = await schema.validateAsync(
+                req.body,
+                validationOptions
+            );
+            req.body = value;
+            next();
+        } catch (e: any) {
+            const errors: string[] = [];
+            e.details.forEach((error: Joi.ValidationErrorItem) =&gt; {
+                errors.push(error.message);
+            });
+            res.status(400).send({ errors: errors });
+        }
+    };
+}
+
+export default validationMiddleware;
+</nodenote>
+            </node>
+          </nodes>
+        </node>
+      </nodes>
+    </node>
+  </nodes>
+  <groups/>
+  <connections>
+    <connection from_id="7" to_id="21" drag_x="2062.4999999999955" drag_y="550.00000000000068">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="7" to_id="28" drag_x="2086.4999999999927" drag_y="604.00000000000023">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="11" to_id="21" drag_x="1171" drag_y="387.00000000000011">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="11" to_id="20" drag_x="1065" drag_y="465">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="11" to_id="29" drag_x="1703.0000000000005" drag_y="305">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="20" to_id="28" drag_x="1739.4999999999995" drag_y="654.99999999999977">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="8" to_id="4" drag_x="856.99999999999989" drag_y="760.99999999999977">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="11" to_id="4" drag_x="869" drag_y="727">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+  </connections>
+  <stickers>
+    <sticker name="filing_cabinet" posx="1182.6666666666688" posy="1128.0000000000009" width="140"/>
+  </stickers>
+</minder>
