@@ -26,10 +26,17 @@ class PostService {
             return await this.post.findByIdAndUpdate(id, {
                 $set: body,
             });
-
-            
         } catch (error) {
             throw new Error('Unable to create post');
+        }
+    }
+
+    /* CRUD => DELETE */
+    public async delete(id: string) {
+        try {
+            return await this.post.findByIdAndDelete(id);
+        } catch (error) {
+            throw new Error('No Item');
         }
     }
 }

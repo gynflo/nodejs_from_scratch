@@ -25,6 +25,7 @@ class PostController implements Controller {
         );
         this.router.get(`${this.path}`, this.findAll);
         this.router.patch(`${this.path}/:id`, this.update);
+        this.router.delete(`${this.path}/:id`, this.delete);
     }
     /* CRUD => CREATE */
     private create = async (
@@ -68,6 +69,21 @@ class PostController implements Controller {
             return res.status(200).json({ postUpdated });
         } catch (error) {
             next(new HttpException(400, 'Cannot create post'));
+        }
+    };
+
+    /* CRUD => DELETE */
+    private delete = async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise<Response | void> => {
+        try {
+            const id = req.params.id;
+            await this.PostService.delete(id);
+            res.status(200).json({ message: 'Post deleled' });
+        } catch (error) {
+            next(new HttpException(404, 'ID not found !'));
         }
     };
 }
