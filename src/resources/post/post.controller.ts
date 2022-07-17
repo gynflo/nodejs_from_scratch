@@ -24,7 +24,7 @@ class PostController implements Controller {
             this.create
         );
         this.router.get(`${this.path}`, this.findAll);
-        this.router.patch(`${this.path}`, this.update);
+        this.router.patch(`${this.path}/:id`, this.update);
     }
     /* CRUD => CREATE */
     private create = async (
@@ -48,26 +48,24 @@ class PostController implements Controller {
     ): Promise<Response | void> => {
         try {
             const post = await this.PostService.findAll();
-            res.status(304).json({ post });
+            if (post) {
+                res.status(200).json({ post });
+            }
         } catch (error) {
             next(new HttpException(404, 'Collection not found'));
         }
     };
-    /* CRUD => CREATE */
+    /* CRUD => UPDATE */
     private update = async (
         req: Request,
         res: Response,
         next: NextFunction
     ): Promise<Response | void> => {
         try {
-            const id = '';
-            console.log(
-                '🚀 ~ file: post.controller.ts ~ line 64 ~ PostController ~ req.params.id',
-                req
-            );
+            const id = req.params.id;
             const body = req.body;
-            const post = await this.PostService.update(id, body);
-            res.status(202).json({ post });
+            const postUpdated = await this.PostService.update(id, body);
+            return res.status(200).json({ postUpdated });
         } catch (error) {
             next(new HttpException(400, 'Cannot create post'));
         }

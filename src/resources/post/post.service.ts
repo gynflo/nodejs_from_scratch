@@ -15,7 +15,7 @@ class PostService {
     /* CRUD => READ ALL */
     public async findAll(): Promise<{} | void> {
         try {
-            return await this.post.find().exec();
+            return await this.post.find();
         } catch (error) {
             throw new Error('No items found in the collection');
         }
@@ -23,7 +23,11 @@ class PostService {
     /* CRUD => UPDATE */
     public async update(id: string, body: Post) {
         try {
-            return await this.post.findByIdAndUpdate(id, { body }).exec();
+            return await this.post.findByIdAndUpdate(id, {
+                $set: body,
+            });
+
+            
         } catch (error) {
             throw new Error('Unable to create post');
         }
