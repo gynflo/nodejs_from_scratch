@@ -12,7 +12,7 @@ function validationMiddleware(schema: Joi.Schema): RequestHandler {
             // si echec , on arrete tout
             abortEarly: false,
             // supprime les entrées inconnues
-            allowunknown: true,
+            allowUnknown: true,
             stripUnknown: true,
         };
 
