@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<minder version="1.14.0" parent-etag="962515253" etag="4052284833">
+<minder version="1.14.0" parent-etag="2874933742" etag="270225980">
   <theme name="default" label="Light" index="-1"/>
   <styles>
     <style level="0" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="rounded" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="10" nodepadding="10" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
@@ -14,33 +14,290 @@
     <style level="9" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
     <style level="10" isset="false" branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true" connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
   </styles>
-  <drawarea x="-942.83333333333167" y="-936.33333333333326" scale="1"/>
+  <drawarea x="-1485.1666666666652" y="-1205.6666666666665" scale="0.5"/>
   <images/>
   <nodes>
-    <node id="16" posx="1217.8333333333326" posy="1066.0000000000005" width="56" height="46" side="left" fold="false" treesize="926" layout="Vertical" group="false">
+    <node id="16" posx="1760.1666666666656" posy="1335.3333333333339" width="56" height="46" side="left" fold="false" treesize="926.00000000000023" layout="Vertical" group="false">
       <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-      <nodename posx="1231.8333333333326" posy="1080.0000000000005" maxwidth="200">
+      <nodename posx="1774.1666666666656" posy="1349.3333333333339" maxwidth="200">
         <text data="SRC"/>
       </nodename>
       <nodenote></nodenote>
       <nodes>
-        <node id="13" posx="424.33333333333258" posy="890.00000000000045" width="158" height="76" side="top" fold="false" treesize="636" color="#68b723" colorroot="false" layout="Vertical" sticker="folder" group="false">
+        <node id="13" posx="211.66666666666606" posy="1159.3333333333339" width="158" height="76" side="top" fold="false" treesize="1281" color="#68b723" colorroot="false" layout="Vertical" sticker="folder" group="false">
           <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-          <nodename posx="492.33333333333258" posy="919.00000000000045" maxwidth="200">
+          <nodename posx="279.66666666666606" posy="1188.3333333333339" maxwidth="200">
             <text data="Resources"/>
           </nodename>
           <nodenote></nodenote>
           <nodes>
-            <node id="15" posx="446.83333333333258" posy="714.00000000000045" width="113" height="76" side="top" fold="false" treesize="636" color="#68b723" colorroot="false" layout="Vertical" sticker="folder" group="false">
+            <node id="30" posx="-89.33333333333394" posy="983.33333333333371" width="116" height="76" side="top" fold="false" treesize="633" color="#68b723" colorroot="false" layout="Vertical" sticker="folder" group="false">
               <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-              <nodename posx="514.83333333333258" posy="743.00000000000045" maxwidth="200">
+              <nodename posx="-21.33333333333394" posy="1012.3333333333337" maxwidth="200">
+                <text data="User"/>
+              </nodename>
+              <nodenote></nodenote>
+              <nodes>
+                <node id="31" posx="-142.33333333333394" posy="807.33333333333371" width="222" height="76" side="top" fold="false" treesize="633" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="-74.33333333333394" posy="836.33333333333371" maxwidth="200">
+                    <text data="user.controller.ts"/>
+                  </nodename>
+                  <nodenote>import { Router, Request, Response, NextFunction } from 'express';
+
+import Controller from '@/utils/interfaces/controller.interface';
+import HttpException from '@/utils/exceptions/http.exception';
+
+import validationMiddleware from '@/middleware/validation.middleware';
+import validate from '@/resources/user/user.validation';
+import UserService from '@/resources/user/user.service';
+import authenticated from '@/middleware/authenticated.middleware';
+
+class UserController implements Controller {
+    public path = '/users';
+    public router = Router();
+    private UserService = new UserService();
+
+    constructor() {
+        this.initializeRoutes();
+    }
+
+    private initializeRoutes(): void {
+        this.router.post(
+            `${this.path}/register`,
+            validationMiddleware(validate.register),
+            this.register
+        );
+        this.router.post(
+            `${this.path}/login`,
+            validationMiddleware(validate.login),
+            this.login
+        );
+        this.router.get(`${this.path}`, authenticated, this.getUser);
+    }
+
+    private register = async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise&lt;Response | void&gt; =&gt; {
+        try {
+            const { username, email, password } = req.body;
+            const token = await this.UserService.register(
+                username,
+                email,
+                password,
+                'user'
+            );
+            res.status(201).json({ token });
+        } catch (error: any) {
+            next(new HttpException(400, error.message));
+        }
+    };
+
+    private login = async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Promise&lt;Response | void&gt; =&gt; {
+        try {
+            const { email, password } = req.body;
+            const token = await this.UserService.login(email, password);
+            res.status(200).json({ token });
+        } catch (error: any) {
+            next(new HttpException(400, error.message));
+        }
+    };
+
+    private getUser = (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ): Response | void =&gt; {
+        if (!req.user) {
+            next(new HttpException(404, 'User not logging'));
+        }
+        res.status(200).json({ user: req.user });
+    };
+}
+
+export default UserController;
+</nodenote>
+                  <nodes>
+                    <node id="32" posx="-351.83333333333394" posy="631.33333333333371" width="225" height="76" side="top" fold="false" treesize="225" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                      <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                      <nodename posx="-283.83333333333394" posy="660.33333333333371" maxwidth="200">
+                        <text data="user.validation.ts"/>
+                      </nodename>
+                      <nodenote>import Joi from 'joi';
+
+const register = Joi.object({
+    username: Joi.string().max(30).required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(6).required(),
+});
+
+const login = Joi.object({
+    email: Joi.string().email().required(),
+    password: Joi.string().min(6).required(),
+});
+
+export default { register, login };
+</nodenote>
+                    </node>
+                    <node id="33" posx="-21.83333333333394" posy="631.33333333333371" width="206" height="76" side="top" fold="false" treesize="416" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                      <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                      <nodename posx="46.16666666666606" posy="660.33333333333371" maxwidth="200">
+                        <text data="user.service.ts"/>
+                      </nodename>
+                      <nodenote>import UserModel from '@/resources/user/user.model';
+import token from '@/utils/token';
+
+class UserService {
+    private user = UserModel;
+
+    /*
+     *Register a new user
+     * Return token: string
+     */
+    public async register(
+        username: string,
+        email: string,
+        password: string,
+        role: string
+    ): Promise&lt;string | Error&gt; {
+        try {
+            const user = await this.user.create({
+                username,
+                email,
+                password,
+                role,
+            });
+            const accessToken = token.createToken(user);
+            return accessToken;
+        } catch (error) {
+            throw new Error('Unable to create user');
+        }
+    }
+
+    /*
+     *Attempt to login user
+     */
+    public async login(
+        email: string,
+        password: string
+    ): Promise&lt;string | Error&gt; {
+        try {
+            const user = await this.user.findOne({ email });
+
+            if (!user) {
+                throw new Error(
+                    'Unable to find user with that Email Address !'
+                );
+            }
+
+            if (await user.isValidPassword(password)) {
+                return token.createToken(user);
+            }else {
+                throw new Error('Wrong Credentials')
+            }
+        } catch (error) {
+            throw new Error('Something went wrong !');
+        }
+    }
+}
+
+export default UserService;
+</nodenote>
+                      <nodes>
+                        <node id="34" posx="-126.83333333333394" posy="455.33333333333371" width="218" height="76" side="top" fold="false" treesize="218" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                          <nodename posx="-58.83333333333394" posy="484.33333333333371" maxwidth="200">
+                            <text data="user.interface.ts"/>
+                          </nodename>
+                          <nodenote>import { Document } from "mongoose";
+
+export default interface User extends Document {
+    _id?: string,
+    email: string,
+    username: string,
+    password: string,
+    role: string,
+
+    isValidPassword(password: string):Promise&lt;boolean | Error&gt;;
+}</nodenote>
+                        </node>
+                        <node id="36" posx="91.16666666666606" posy="455.33333333333371" width="198" height="76" side="top" fold="false" treesize="198" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                          <nodename posx="159.16666666666606" posy="484.33333333333371" maxwidth="200">
+                            <text data="user.model.ts"/>
+                          </nodename>
+                          <nodenote>import { Schema, model } from 'mongoose';
+import bcrypt from 'bcrypt';
+import User from '@/resources/user/user.interface';
+
+
+const UserSchema = new Schema(
+    {
+        username: {
+            type: String,
+            required: true,
+            unique: true,
+        },
+        email: {
+            type: String,
+            required: true,
+            trim: true, // pr&#xE9;caution pour supprimer l'espace
+            unique: true,
+        },
+        password: {
+            type: String,
+        },
+        role: {
+            type: String,
+            required: true,
+        },
+    },
+    { timestamps: true }
+);
+
+// Hash passswd
+UserSchema.pre&lt;User&gt;('save', async function (next) {
+    if (!this.isModified('password')) {
+        return next();
+    }
+
+    const hash = await bcrypt.hash(this.password, 10);
+    this.password = hash;
+    next();
+});
+
+//Compare passwd
+UserSchema.methods.isValidPassword = async function (
+    password: string
+): Promise&lt;boolean | Error&gt; {
+    return await bcrypt.compare(password, this.password);
+};
+
+export default model&lt;User&gt;('User', UserSchema);
+</nodenote>
+                        </node>
+                      </nodes>
+                    </node>
+                  </nodes>
+                </node>
+              </nodes>
+            </node>
+            <node id="15" posx="550.66666666666606" posy="983.33333333333371" width="113" height="76" side="top" fold="false" treesize="644" color="#68b723" colorroot="false" layout="Vertical" sticker="folder" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="618.66666666666606" posy="1012.3333333333337" maxwidth="200">
                 <text data="Post"/>
               </nodename>
               <nodenote></nodenote>
               <nodes>
-                <node id="11" posx="392.33333333333258" posy="538.00000000000045" width="222" height="76" side="top" fold="false" treesize="636" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                <node id="11" posx="496.16666666666606" posy="807.33333333333371" width="222" height="76" side="top" fold="false" treesize="644" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
                   <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-                  <nodename posx="460.33333333333258" posy="567.00000000000045" maxwidth="200">
+                  <nodename posx="564.16666666666606" posy="836.33333333333371" maxwidth="200">
                     <text data="Post.controller.ts"/>
                   </nodename>
                   <nodenote>import { Router, Request, Response, NextFunction } from 'express';
@@ -86,9 +343,9 @@ class PostController implements Controller {
 export default PostController;
 </nodenote>
                   <nodes>
-                    <node id="27" posx="181.33333333333258" posy="362.00000000000045" width="226" height="76" side="top" fold="false" treesize="226" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                    <node id="27" posx="285.16666666666606" posy="631.33333333333371" width="226" height="76" side="top" fold="false" treesize="226" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
                       <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-                      <nodename posx="249.33333333333258" posy="391.00000000000045" maxwidth="200">
+                      <nodename posx="353.16666666666606" posy="660.33333333333371" maxwidth="200">
                         <text data="post.validation.ts"/>
                       </nodename>
                       <nodenote>import Joi from 'joi';
@@ -101,9 +358,9 @@ const create = Joi.object({
 export default { create };
 </nodenote>
                     </node>
-                    <node id="26" posx="512.83333333333258" posy="362.00000000000045" width="207" height="76" side="top" fold="false" treesize="418" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                    <node id="26" posx="616.66666666666606" posy="631.33333333333371" width="207" height="76" side="top" fold="false" treesize="418" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
                       <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-                      <nodename posx="580.83333333333258" posy="391.00000000000045" maxwidth="200">
+                      <nodename posx="684.66666666666606" posy="660.33333333333371" maxwidth="200">
                         <text data="post.service.ts"/>
                       </nodename>
                       <nodenote>import PostModel from '@/resources/post/post.model';
@@ -125,9 +382,9 @@ class PostService {
 export default PostService;
 </nodenote>
                       <nodes>
-                        <node id="23" posx="407.33333333333258" posy="186.00000000000045" width="219" height="76" side="top" fold="false" treesize="219" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                        <node id="23" posx="511.16666666666606" posy="455.33333333333371" width="219" height="76" side="top" fold="false" treesize="219" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
                           <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-                          <nodename posx="475.33333333333258" posy="215.00000000000045" maxwidth="200">
+                          <nodename posx="579.16666666666606" posy="484.33333333333371" maxwidth="200">
                             <text data="post.interface.ts"/>
                           </nodename>
                           <nodenote>import { Document } from 'mongoose';
@@ -138,9 +395,9 @@ export default interface Post extends Document {
 }
 </nodenote>
                         </node>
-                        <node id="25" posx="626.33333333333258" posy="186.00000000000045" width="199" height="76" side="top" fold="false" treesize="199" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
+                        <node id="25" posx="730.16666666666606" posy="455.33333333333371" width="199" height="76" side="top" fold="false" treesize="199" color="#68b723" colorroot="false" layout="Vertical" sticker="document" group="false">
                           <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-                          <nodename posx="694.33333333333258" posy="215.00000000000045" maxwidth="200">
+                          <nodename posx="798.16666666666606" posy="484.33333333333371" maxwidth="200">
                             <text data="post.model.ts"/>
                           </nodename>
                           <nodenote>import { Schema, model } from 'mongoose';
@@ -172,9 +429,9 @@ export default model&lt;Post&gt;('Post', PostSchema);
             </node>
           </nodes>
         </node>
-        <node id="4" posx="821.33333333333258" posy="890.00000000000045" width="157" height="76" side="top" fold="false" treesize="157" color="#f9c440" colorroot="false" layout="Vertical" sticker="document" group="false">
+        <node id="4" posx="931.16666666666606" posy="1159.3333333333339" width="157" height="76" side="top" fold="false" treesize="157" color="#f9c440" colorroot="false" layout="Vertical" sticker="document" group="false">
           <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-          <nodename posx="889.33333333333258" posy="919.00000000000045" maxwidth="200">
+          <nodename posx="999.16666666666606" posy="1188.3333333333339" maxwidth="200">
             <text data="index.ts"/>
           </nodename>
           <nodenote>
@@ -193,92 +450,9 @@ const app = new App([new PostController()], Number(process.env.PORT));
 
 app.listen();</nodenote>
         </node>
-        <node id="14" posx="1252.3333333333326" posy="890.00000000000045" width="115" height="76" side="top" fold="false" treesize="663" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
-          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-          <nodename posx="1320.3333333333326" posy="919.00000000000045" maxwidth="200">
-            <text data="Utils"/>
-          </nodename>
-          <nodenote></nodenote>
-          <nodes>
-            <node id="8" posx="978.33333333333258" posy="714.00000000000045" width="184" height="76" side="top" fold="false" treesize="184" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
-              <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="300" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-              <nodename posx="1046.3333333333326" posy="743.00000000000045" maxwidth="300">
-                <text data="ValidateEnv"/>
-              </nodename>
-              <nodenote>
-
-import { cleanEnv, str, port } from 'envalid';
-
-function validateEnv(): void {
-    cleanEnv(process.env, {
-        NODE_ENV: str({
-            choices: ['development', 'production'],
-        }),
-        MONGO_PATH: str(),
-        MONGO_USER: str(),
-        MONGO_PASSWORD: str(),
-        PORT: port({ default: 3000 }),
-    });
-}
-
-export default validateEnv;</nodenote>
-            </node>
-            <node id="18" posx="1193.3333333333326" posy="714.00000000000045" width="161" height="76" side="top" fold="false" treesize="223" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
-              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-              <nodename posx="1261.3333333333326" posy="743.00000000000045" maxwidth="200">
-                <text data="exceptions"/>
-              </nodename>
-              <nodenote></nodenote>
-              <nodes>
-                <node id="20" posx="1162.3333333333326" posy="538.00000000000045" width="223" height="76" side="top" fold="false" treesize="223" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
-                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-                  <nodename posx="1230.3333333333326" posy="567.00000000000045" maxwidth="200">
-                    <text data="http.exception.ts"/>
-                  </nodename>
-                  <nodenote>class HttpException extends Error {
-    public status: number;
-    public message: string;
-
-    constructor(status: number, message: string) {
-        super(message);
-        this.status = status;
-        this.message = message;
-    }
-}
-
-export default HttpException;
-</nodenote>
-                </node>
-              </nodes>
-            </node>
-            <node id="19" posx="1435.8333333333326" posy="714.00000000000045" width="155" height="76" side="top" fold="false" treesize="256" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
-              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-              <nodename posx="1503.8333333333326" posy="743.00000000000045" maxwidth="200">
-                <text data="Interfaces"/>
-              </nodename>
-              <nodenote></nodenote>
-              <nodes>
-                <node id="21" posx="1385.3333333333326" posy="538.00000000000045" width="256" height="76" side="top" fold="false" treesize="256" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
-                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="158" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-                  <nodename posx="1453.3333333333326" posy="567.00000000000045" maxwidth="158">
-                    <text data="controller.interface.ts"/>
-                  </nodename>
-                  <nodenote>import { Router } from 'express';
-
-interface Controller {
-    path: string;
-    router: Router;
-}
-
-export default Controller;</nodenote>
-                </node>
-              </nodes>
-            </node>
-          </nodes>
-        </node>
-        <node id="7" posx="1641.3333333333326" posy="890.00000000000045" width="144" height="76" side="top" fold="false" treesize="144" color="#c6262e" colorroot="false" layout="Vertical" sticker="document" group="false">
+        <node id="7" posx="1088.1666666666652" posy="1159.3333333333339" width="144" height="76" side="top" fold="false" treesize="144" color="#c6262e" colorroot="false" layout="Vertical" sticker="document" group="false">
           <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-          <nodename posx="1709.3333333333326" posy="919.00000000000045" maxwidth="200">
+          <nodename posx="1156.1666666666652" posy="1188.3333333333339" maxwidth="200">
             <text data="app.ts"/>
           </nodename>
           <nodenote>import express, { Application } from 'express';
@@ -346,16 +520,172 @@ class App {
 export default App;
 </nodenote>
         </node>
-        <node id="17" posx="1958.8333333333326" posy="890.00000000000045" width="174" height="76" side="top" fold="false" treesize="521" color="#7a36b1" colorroot="false" layout="Vertical" sticker="folder" group="false">
+        <node id="14" posx="1791.6666666666652" posy="1159.3333333333339" width="115" height="76" side="top" fold="false" treesize="1234" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
+          <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+          <nodename posx="1859.6666666666652" posy="1188.3333333333339" maxwidth="200">
+            <text data="Utils"/>
+          </nodename>
+          <nodenote></nodenote>
+          <nodes>
+            <node id="8" posx="1232.1666666666652" posy="983.33333333333371" width="184" height="76" side="top" fold="false" treesize="184" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+              <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="300" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="1300.1666666666652" posy="1012.3333333333337" maxwidth="300">
+                <text data="ValidateEnv"/>
+              </nodename>
+              <nodenote>
+
+import { cleanEnv, str, port } from 'envalid';
+
+function validateEnv(): void {
+    cleanEnv(process.env, {
+        NODE_ENV: str({
+            choices: ['development', 'production'],
+        }),
+        MONGO_PATH: str(),
+        MONGO_USER: str(),
+        MONGO_PASSWORD: str(),
+        PORT: port({ default: 3000 }),
+    });
+}
+
+export default validateEnv;</nodenote>
+            </node>
+            <node id="18" posx="1447.1666666666652" posy="983.33333333333371" width="161" height="76" side="top" fold="false" treesize="223" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="1515.1666666666652" posy="1012.3333333333337" maxwidth="200">
+                <text data="exceptions"/>
+              </nodename>
+              <nodenote></nodenote>
+              <nodes>
+                <node id="20" posx="1416.1666666666652" posy="807.33333333333371" width="223" height="76" side="top" fold="false" treesize="223" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="1484.1666666666652" posy="836.33333333333371" maxwidth="200">
+                    <text data="http.exception.ts"/>
+                  </nodename>
+                  <nodenote>class HttpException extends Error {
+    public status: number;
+    public message: string;
+
+    constructor(status: number, message: string) {
+        super(message);
+        this.status = status;
+        this.message = message;
+    }
+}
+
+export default HttpException;
+</nodenote>
+                </node>
+              </nodes>
+            </node>
+            <node id="19" posx="1803.6666666666652" posy="983.33333333333371" width="155" height="76" side="top" fold="false" treesize="484" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="1871.6666666666652" posy="1012.3333333333337" maxwidth="200">
+                <text data="Interfaces"/>
+              </nodename>
+              <nodenote></nodenote>
+              <nodes>
+                <node id="21" posx="1639.1666666666652" posy="807.33333333333371" width="256" height="76" side="top" fold="false" treesize="256" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="158" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="1707.1666666666652" posy="836.33333333333371" maxwidth="158">
+                    <text data="controller.interface.ts"/>
+                  </nodename>
+                  <nodenote>import { Router } from 'express';
+
+interface Controller {
+    path: string;
+    router: Router;
+}
+
+export default Controller;</nodenote>
+                </node>
+                <node id="45" posx="1895.1666666666652" posy="807.33333333333371" width="228" height="76" side="top" fold="false" treesize="228" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="158" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="1963.1666666666652" posy="836.33333333333371" maxwidth="158">
+                    <text data="token.interface.ts"/>
+                  </nodename>
+                  <nodenote>import { Schema } from 'mongoose';
+
+interface Token extends Object {
+    id: Schema.Types.ObjectId;
+    expiresIn: number;
+}
+
+export default Token;
+</nodenote>
+                </node>
+              </nodes>
+            </node>
+            <node id="39" posx="2136.6666666666652" posy="983.33333333333371" width="158" height="76" side="top" fold="false" treesize="185" color="#3689e6" colorroot="false" layout="Vertical" sticker="folder" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="2204.6666666666652" posy="1012.3333333333337" maxwidth="200">
+                <text data="definitions"/>
+              </nodename>
+              <nodenote></nodenote>
+              <nodes>
+                <node id="43" posx="2123.1666666666652" posy="807.33333333333371" width="185" height="76" side="top" fold="false" treesize="185" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+                  <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+                  <nodename posx="2191.1666666666652" posy="836.33333333333371" maxwidth="200">
+                    <text data="custom.d.ts"/>
+                  </nodename>
+                  <nodenote>import User from '@/resources/user/user.interface';
+
+declare global {
+    namespace Express {
+        export interface Request {
+            user: User;
+        }
+    }
+}</nodenote>
+                </node>
+              </nodes>
+            </node>
+            <node id="38" posx="2308.1666666666652" posy="983.33333333333371" width="158" height="76" side="top" fold="false" treesize="158" color="#3689e6" colorroot="false" layout="Vertical" sticker="document" group="false">
+              <style branchmargin="100" branchradius="25" linktype="curved" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="2376.1666666666652" posy="1012.3333333333337" maxwidth="200">
+                <text data="token.ts"/>
+              </nodename>
+              <nodenote>import jwt from 'jsonwebtoken';
+import User from '@/resources/user/user.interface';
+import Token from '@/utils/interfaces/token.interface';
+
+
+export const createToken = (user: User): string =&gt; {
+    return jwt.sign({ id: user._id }, process.env.JWT_SECRET as jwt.Secret, {
+        expiresIn: '1d',
+    });
+};
+
+export const verifyToken = async (
+    token: string
+): Promise&lt;Token | jwt.VerifyErrors&gt; =&gt; {
+    return new Promise((resolve, reject) =&gt; {
+        jwt.verify(
+            token,
+            process.env.JWT_SECRET as jwt.Secret,
+            (err, payload) =&gt; {
+                if (err) return reject(err);
+                resolve(payload as Token);
+            }
+        );
+    });
+};
+
+export default { createToken, verifyToken };
+</nodenote>
+            </node>
+          </nodes>
+        </node>
+        <node id="17" posx="2787.1666666666652" posy="1159.3333333333339" width="174" height="76" side="top" fold="false" treesize="816" color="#7a36b1" colorroot="false" layout="Vertical" sticker="folder" group="false">
           <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-          <nodename posx="2026.8333333333326" posy="919.00000000000045" maxwidth="200">
+          <nodename posx="2855.1666666666652" posy="1188.3333333333339" maxwidth="200">
             <text data="Middlewares"/>
           </nodename>
           <nodenote></nodenote>
           <nodes>
-            <node id="28" posx="1785.3333333333326" posy="714.00000000000045" width="242" height="76" side="top" fold="false" treesize="242" color="#7a36b1" colorroot="false" layout="Vertical" sticker="document" group="false">
+            <node id="28" posx="2466.1666666666652" posy="983.33333333333371" width="242" height="76" side="top" fold="false" treesize="242" color="#7a36b1" colorroot="false" layout="Vertical" sticker="document" group="false">
               <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-              <nodename posx="1853.3333333333326" posy="743.00000000000045" maxwidth="200">
+              <nodename posx="2534.1666666666652" posy="1012.3333333333337" maxwidth="200">
                 <text data="error.middleware.ts"/>
               </nodename>
               <nodenote>import { Request, Response, NextFunction } from 'express';
@@ -379,9 +709,9 @@ function ErrorMiddleware(
 export default ErrorMiddleware;
 </nodenote>
             </node>
-            <node id="29" posx="2027.3333333333326" posy="714.00000000000045" width="279" height="76" side="top" fold="false" treesize="279" color="#7a36b1" colorroot="false" layout="Vertical" sticker="document" group="false">
+            <node id="29" posx="2708.1666666666652" posy="983.33333333333371" width="279" height="76" side="top" fold="false" treesize="279" color="#7a36b1" colorroot="false" layout="Vertical" sticker="document" group="false">
               <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
-              <nodename posx="2095.3333333333326" posy="743.00000000000045" maxwidth="200">
+              <nodename posx="2776.1666666666652" posy="1012.3333333333337" maxwidth="200">
                 <text data="validation.middleware.ts"/>
               </nodename>
               <nodenote>import { Request, Response, NextFunction, RequestHandler } from 'express';
@@ -422,6 +752,56 @@ function validationMiddleware(schema: Joi.Schema): RequestHandler {
 export default validationMiddleware;
 </nodenote>
             </node>
+            <node id="37" posx="2987.1666666666652" posy="983.33333333333371" width="295" height="76" side="top" fold="false" treesize="295" color="#7a36b1" colorroot="false" layout="Vertical" sticker="document" group="false">
+              <style branchmargin="100" branchradius="25" linktype="straight" linkwidth="4" linkarrow="false" linkdash="solid" nodeborder="underlined" nodewidth="200" nodeborderwidth="4" nodefill="false" nodemargin="8" nodepadding="6" nodefont="Sans 11" nodemarkup="true"/>
+              <nodename posx="3055.1666666666652" posy="1003.3333333333337" maxwidth="200">
+                <text data="authenticated.middleware.ts"/>
+              </nodename>
+              <nodenote>import { Request, Response, NextFunction, RequestHandler } from 'express';
+import token from '@/utils/token';
+import UserModel from '@/resources/user/user.model';
+import Token from '@/utils/interfaces/token.interface';
+import HttpException from '@/utils/exceptions/http.exception';
+import Jwt from 'jsonwebtoken';
+
+async function authenticatedMiddleware(
+    req: Request,
+    res: Response,
+    next: NextFunction
+): Promise&lt;Response | void&gt; {
+    const bearer = req.headers.authorization;
+
+    if (!bearer || !bearer.startsWith('Bearer ')) {
+        return next(new HttpException(404, 'Unauthorized !'));
+    }
+    const accessToken = bearer?.split('Bearer ')[1].trim();
+
+    try {
+        const payload: Token | Jwt.JsonWebTokenError = await token.verifyToken(
+            accessToken
+        );
+
+        if (payload instanceof Jwt.JsonWebTokenError) {
+            return next(new HttpException(404, 'Unauthorized !'));
+        }
+        const user = await UserModel.findById(payload.id)
+            .select('-password')
+            .exec();
+
+        if (!user) {
+            return next(new HttpException(404, 'Unauthorized !'));
+        } else {
+            req.user = user;
+            next();
+        }
+    } catch (error) {
+        next(new HttpException(404, 'Unauthorized'));
+    }
+}
+
+export default authenticatedMiddleware;
+</nodenote>
+            </node>
           </nodes>
         </node>
       </nodes>
@@ -429,48 +809,83 @@ export default validationMiddleware;
   </nodes>
   <groups/>
   <connections>
-    <connection from_id="7" to_id="21" drag_x="2066.4999999999945" drag_y="550.0000000000008">
+    <connection from_id="7" to_id="21" drag_x="1916.8333333333244" drag_y="819.33333333333599">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
-    <connection from_id="7" to_id="28" drag_x="2090.49999999999" drag_y="604.00000000000034">
+    <connection from_id="7" to_id="28" drag_x="2154.3333333333226" drag_y="873.33333333333462">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
-    <connection from_id="11" to_id="21" drag_x="1174.9999999999991" drag_y="387.00000000000023">
+    <connection from_id="11" to_id="21" drag_x="1353.8333333333294" drag_y="656.3333333333336">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
-    <connection from_id="11" to_id="20" drag_x="1068.9999999999991" drag_y="465.00000000000011">
+    <connection from_id="11" to_id="20" drag_x="1247.8333333333301" drag_y="734.33333333333371">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
-    <connection from_id="11" to_id="29" drag_x="1706.9999999999984" drag_y="305.00000000000011">
+    <connection from_id="11" to_id="29" drag_x="2099.3333333333326" drag_y="574.33333333333303">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
-    <connection from_id="20" to_id="28" drag_x="1743.4999999999989" drag_y="655">
+    <connection from_id="20" to_id="28" drag_x="2210.8333333333308" drag_y="924.33333333333451">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
-    <connection from_id="8" to_id="4" drag_x="860.99999999999818" drag_y="760.99999999999977">
+    <connection from_id="8" to_id="4" drag_x="1042.8333333333294" drag_y="1030.3333333333321">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
-    <connection from_id="11" to_id="4" drag_x="864" drag_y="668">
+    <connection from_id="11" to_id="4" drag_x="970.83333333333394" drag_y="937.33333333333178">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="31" to_id="4" drag_x="495.00000000000011" drag_y="1120">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="31" to_id="21" drag_x="87" drag_y="52">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="31" to_id="20" drag_x="91" drag_y="180">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="31" to_id="29" drag_x="267" drag_y="32">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="31" to_id="37" drag_x="1323" drag_y="1892">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="33" to_id="38" drag_x="818" drag_y="1116">
+      <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
+      <title></title>
+      <note></note>
+    </connection>
+    <connection from_id="23" to_id="43" drag_x="1452" drag_y="240">
       <style connectiondash="dotted" connectionlwidth="2" connectionarrow="fromto" connectionpadding="3" connectionfont="Sans 10" connectiontwidth="100"/>
       <title></title>
       <note></note>
     </connection>
   </connections>
   <stickers>
-    <sticker name="filing_cabinet" posx="1182.6666666666688" posy="1128.0000000000009" width="140"/>
+    <sticker name="filing_cabinet" posx="1629.0000000000023" posy="1349.3333333333339" width="140"/>
   </stickers>
 </minder>
